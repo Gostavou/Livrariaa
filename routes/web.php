@@ -2,7 +2,12 @@
 
 use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LivroController;
 use Illuminate\Support\Facades\Route;
+
+Route::resource('livros', LivroController::class);
+
+Route::resource('alunos', AlunoController::class);
 
 Route::get('/', function () {
     return view('welcome');
